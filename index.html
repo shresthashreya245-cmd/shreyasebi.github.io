@@ -3,111 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyasebi Shrestha | Student Portfolio</title>
+
+    <title>Shreya Shrestha | Student Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: #f8f7ff;
+            color: #29243a;
             line-height: 1.6;
-            background: #f5f7fa;
-            color: #222;
-        }
-
-        header {
-            background: #1f2937;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        header h1 {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 20px;
         }
 
         nav {
             background: white;
-            padding: 15px;
-            text-align: center;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav h2 {
+            color: #6c4ab6;
         }
 
         nav a {
-            color: #1f2937;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            color: #29243a;
+            margin-left: 25px;
+            font-weight: 500;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #6c4ab6;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 70px 10%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text p:first-child {
+            color: #6c4ab6;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #6c4ab6;
+        }
+
+        .hero-text p {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #6c4ab6;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .button:hover {
+            background: #543796;
+        }
+
+        .profile {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(108,74,182,0.25);
         }
 
         section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 32px;
+            color: #6c4ab6;
+        }
+
+        .about {
             background: white;
-            border-radius: 12px;
+            border-radius: 25px;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         }
 
-        h2 {
-            color: #1f2937;
-            margin-bottom: 20px;
-            font-size: 30px;
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill {
-            background: #e5e7eb;
-            padding: 10px 18px;
+        .card {
+            background: white;
+            padding: 30px;
             border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            transition: 0.3s;
         }
 
-        .project {
-            border-left: 4px solid #2563eb;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            background: #f8fafc;
+        .card:hover {
+            transform: translateY(-8px);
         }
 
-        .project h3 {
-            margin-bottom: 8px;
+        .card h3 {
+            color: #6c4ab6;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #eeeaff;
         }
 
         footer {
             text-align: center;
-            background: #1f2937;
+            padding: 25px;
+            background: #29243a;
             color: white;
-            padding: 30px;
-            margin-top: 50px;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 32px;
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 40px;
             }
 
             nav a {
-                display: inline-block;
-                margin: 5px;
+                margin-left: 10px;
             }
         }
     </style>
@@ -115,120 +181,121 @@
 
 <body>
 
-    <header>
-        <h1>Shreyasebi Shrestha</h1>
-        <p>Business Management Student | Aspiring Entrepreneur</p>
-    </header>
+<nav>
+    <h2>Shreya.</h2>
 
-    <nav>
+    <div>
         <a href="#about">About</a>
-        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
         <a href="#goals">Goals</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
+</nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I am Shreyasebi Shrestha, a Business Management student
-            interested in entrepreneurship, international business,
-            digital technology, and personal development.
-        </p>
-        <br>
-        <p>
-            I am continuously developing my communication, analytical,
-            technical, and business skills through my studies and
-            practical learning experiences.
-        </p>
-    </section>
+<section class="hero">
 
-    <section id="education">
-        <h2>Education</h2>
+    <div class="hero-text">
+        <p>HELLO, I'M</p>
 
-        <h3>Dong-A University</h3>
-        <p>Business Management / Integrated Business Management</p>
-        <p>South Korea</p>
-        <br>
-
-        <h3>High School</h3>
-        <p>Science Major</p>
-        <p>Nepal</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-
-        <div class="skills">
-            <span class="skill">Communication</span>
-            <span class="skill">Teamwork</span>
-            <span class="skill">Problem Solving</span>
-            <span class="skill">Microsoft Office</span>
-            <span class="skill">PowerPoint</span>
-            <span class="skill">Excel</span>
-            <span class="skill">Basic Python</span>
-            <span class="skill">Business Analysis</span>
-            <span class="skill">English</span>
-            <span class="skill">Korean - Beginner</span>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Business Research Project</h3>
-            <p>
-                Academic research focused on identifying business
-                opportunities and developing practical solutions.
-            </p>
-        </div>
-
-        <div class="project">
-            <h3>Python Learning Projects</h3>
-            <p>
-                Small programming projects created while learning
-                Python and developing computational thinking skills.
-            </p>
-        </div>
-
-        <div class="project">
-            <h3>Korea-Nepal Business Research</h3>
-            <p>
-                Exploring potential business opportunities and
-                connections between South Korea and Nepal.
-            </p>
-        </div>
-    </section>
-
-    <section id="goals">
-        <h2>Career Goals</h2>
+        <h1>
+            Shreya <span class="highlight">Shrestha</span>
+        </h1>
 
         <p>
-            My goal is to build strong knowledge and practical skills
-            in business, entrepreneurship, technology, and international
-            business.
+            Business Management Student | Future Entrepreneur
         </p>
-        <br>
+
         <p>
-            In the future, I hope to create meaningful business
-            opportunities and build a successful career with an
-            international perspective.
+            I am passionate about business, learning new skills,
+            creativity and building a successful future.
         </p>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
+        <a href="#about" class="button">Explore My Portfolio →</a>
+    </div>
 
-        <p><strong>GitHub:</strong> shresthashreya245</p>
-        <p><strong>Email:</strong> Add your email here</p>
-        <p><strong>LinkedIn:</strong> Add your LinkedIn profile here</p>
-    </section>
+    <!-- Your picture will go here -->
+    <img src="profile.jpg" alt="Shreya Shrestha" class="profile">
 
-    <footer>
-        <p>© 2026 Shreyasebi Shrestha | Student Portfolio</p>
-    </footer>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <div class="about">
+        <p>
+            I am a Business Management student who enjoys learning,
+            exploring new opportunities and developing practical skills.
+            My goal is to combine business knowledge, creativity and
+            technology to create meaningful opportunities in the future.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills & Interests</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>💼 Business</h3>
+            <p>Business management, entrepreneurship and strategic thinking.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Technology</h3>
+            <p>Interested in digital tools, data and technology.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Creativity</h3>
+            <p>Creative thinking, content creation and visual ideas.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌏 Global Mindset</h3>
+            <p>Interested in international opportunities and networking.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="goals">
+    <h2>My Goals</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📚 Learn</h3>
+            <p>Continuously develop my knowledge and practical skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Grow</h3>
+            <p>Build confidence, experience and professional connections.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌱 Create</h3>
+            <p>Develop ideas that can create real value and opportunities.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Let's Connect</h2>
+
+    <p>Thank you for visiting my portfolio!</p>
+    <br>
+
+    <a href="mailto:your@email.com" class="button">
+        Contact Me
+    </a>
+</section>
+
+<footer>
+    © 2026 Shreya Shrestha | Student Portfolio
+</footer>
 
 </body>
 </html>
