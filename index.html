@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student portfolio of Shreyasebi Shrestha, a Business major student with a science background.">
+  <title>Shreyasebi Shrestha | Student Portfolio</title>
+  <style>
+    :root {
+      --purple-900: #3f246f;
+      --purple-700: #6542a8;
+      --purple-500: #8665c5;
+      --purple-100: #f1ebfb;
+      --purple-50: #faf8fe;
+      --ink: #211a2d;
+      --muted: #6f667c;
+      --white: #ffffff;
+      --border: #e8e0f2;
+      --shadow: 0 12px 35px rgba(63, 36, 111, 0.08);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--purple-50);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--purple-900);
+      font-size: 1.05rem;
+    }
+    .brand span { color: var(--purple-500); }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+    .nav-links a:hover { color: var(--purple-700); }
+
+    .hero {
+      padding: 100px 0 90px;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(134,101,197,.13), transparent 28%),
+        linear-gradient(180deg, #fff 0%, var(--purple-50) 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--purple-700);
+      background: var(--white);
+      font-size: .82rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      color: var(--purple-900);
+      max-width: 780px;
+    }
+    .hero h2 {
+      margin: 22px 0 16px;
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-weight: 600;
+      color: var(--purple-700);
+    }
+    .hero-copy {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--purple-700);
+      transition: .2s ease;
+    }
+    .button.primary { background: var(--purple-700); color: white; }
+    .button.secondary { background: white; color: var(--purple-700); border-color: var(--border); }
+    .button:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+    .profile-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .initials {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      background: var(--purple-100);
+      color: var(--purple-900);
+      border: 1px solid var(--border);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+    .profile-card strong { display: block; color: var(--purple-900); font-size: 1.15rem; }
+    .profile-card p { color: var(--muted); margin-top: 5px; font-size: .93rem; }
+
+    section { padding: 88px 0; }
+    .section-heading { max-width: 720px; margin-bottom: 35px; }
+    .section-label {
+      color: var(--purple-700);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .76rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    h2.section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      color: var(--purple-900);
+      letter-spacing: -.04em;
+    }
+    .section-heading p { margin-top: 13px; color: var(--muted); }
+
+    .about-grid, .education-grid, .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { color: var(--purple-900); margin-bottom: 9px; font-size: 1.1rem; }
+    .card p { color: var(--muted); }
+    .accent {
+      border-left: 4px solid var(--purple-500);
+      padding-left: 22px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .fact {
+      background: var(--purple-50);
+      border: 1px solid var(--border);
+      padding: 15px;
+      border-radius: 14px;
+    }
+    .fact small { display: block; color: var(--muted); font-weight: 700; }
+    .fact strong { color: var(--purple-900); }
+
+    .nepal {
+      background: var(--purple-900);
+      color: white;
+    }
+    .nepal .section-label, .nepal h2.section-title { color: white; }
+    .nepal .section-heading p { color: #ddd3ed; }
+    .nepal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .nepal .card {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.16);
+      box-shadow: none;
+    }
+    .nepal .card h3 { color: white; }
+    .nepal .card p { color: #ddd3ed; }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .skill, .project { min-height: 190px; }
+    .number {
+      display: inline-grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--purple-100);
+      color: var(--purple-700);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .language {
+      margin: 17px 0;
+    }
+    .language-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 7px;
+    }
+    .language-top strong { color: var(--purple-900); }
+    .language-top span { color: var(--muted); font-size: .9rem; }
+    .bar {
+      height: 8px;
+      background: var(--purple-100);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .fill {
+      height: 100%;
+      background: var(--purple-500);
+      border-radius: inherit;
+    }
+
+    .goals {
+      display: grid;
+      gap: 14px;
+      max-width: 850px;
+    }
+    .goal {
+      display: grid;
+      grid-template-columns: 45px 1fr;
+      gap: 15px;
+      align-items: start;
+      padding: 18px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+    .goal-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--purple-100);
+      color: var(--purple-700);
+      font-weight: 800;
+    }
+    .goal strong { color: var(--purple-900); }
+    .goal p { color: var(--muted); }
+
+    .contact-box {
+      background: var(--purple-100);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 30px;
+    }
+    .contact-box h3 { color: var(--purple-900); margin-bottom: 8px; }
+    .contact-box p { color: var(--muted); }
+    .email-note {
+      margin-top: 18px;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0;
+      background: #2f1b52;
+      color: #ded6e9;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 70px; }
+      .hero-grid { gap: 40px; }
+      .skills-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .nepal-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 28px, 1120px); }
+      header { position: static; }
+      .nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 8px 13px; }
+      .hero { padding: 58px 0 55px; }
+      h1 { font-size: 3rem; }
+      section { padding: 62px 0; }
+      .facts, .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+      .profile-card { padding: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">Shreyasebi <span>Shrestha</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#nepal">Nepal</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
+        <a href="#projects">Projects</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Student Portfolio • 2026</div>
+          <h1>Shreyasebi Shrestha</h1>
+          <h2>Business Major · Student · Lifelong Learner</h2>
+          <p class="hero-copy">
+            Welcome to my student portfolio. I am building my knowledge in business while
+            developing practical skills in technology, data, communication, and creative problem-solving.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#projects">View my work</a>
+            <a class="button secondary" href="#about">About me</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="initials" aria-label="Shreyasebi Shrestha initials">SS</div>
+          <strong>Business Major</strong>
+          <p>2nd Semester</p>
+          <p>Science background in high school</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">01 · About</div>
+          <h2 class="section-title">Learning, growing, and building practical skills.</h2>
+          <p>
+            My portfolio represents my current academic journey, interests, skills, and goals as a student.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card accent">
+            <h3>Who I am</h3>
+            <p>
+              I am Shreyasebi Shrestha, a Business major student in my second semester.
+              My high school background was in Science, which gave me an interest in analytical
+              thinking and problem-solving. I am now developing that foundation through business studies.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>My learning mindset</h3>
+            <p>
+              I may not have extensive life or professional experience yet, but I see every
+              experience as an opportunity to learn. I am willing to listen, practice, reflect,
+              and improve, and I consider myself a good learner.
+            </p>
+            <div class="facts">
+              <div class="fact"><small>Field</small><strong>Business</strong></div>
+              <div class="fact"><small>Current level</small><strong>2nd Semester</strong></div>
+              <div class="fact"><small>Background</small><strong>Science</strong></div>
+              <div class="fact"><small>Interests</small><strong>Business · Technology · Data</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nepal" id="nepal">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">02 · My Nepal</div>
+          <h2 class="section-title">A connection to home, culture, and heritage.</h2>
+          <p>
+            Nepal is known for its natural landscapes, cultural diversity, historic heritage,
+            and traditions that continue to shape everyday life.
+          </p>
+        </div>
+
+        <div class="nepal-grid">
+          <div class="card">
+            <h3>Natural beauty</h3>
+            <p>
+              Nepal includes the Himalayan region, hills, valleys, rivers, forests, and
+              Mount Everest, the world's highest mountain above sea level.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Culture & festivals</h3>
+            <p>
+              Festivals such as Dashain, Tihar, Holi, and Indra Jatra reflect the country's
+              diverse traditions and bring communities and families together.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Heritage & future</h3>
+            <p>
+              Nepal's temples, monuments, traditional architecture, and living traditions
+              are important parts of its heritage. As a Business student, I hope to build
+              skills that can contribute to meaningful future opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">03 · Education</div>
+          <h2 class="section-title">My academic foundation.</h2>
+        </div>
+
+        <div class="education-grid">
+          <div class="card">
+            <h3>University</h3>
+            <p><strong>Major:</strong> Business</p>
+            <p><strong>Current semester:</strong> 2nd Semester</p>
+            <p><strong>Current study location:</strong> South Korea</p>
+          </div>
+          <div class="card">
+            <h3>High School</h3>
+            <p>
+              I completed my high school education with a <strong>Science major</strong>.
+              This background continues to support my interest in analytical thinking,
+              technology, and problem-solving.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">04 · Skills</div>
+          <h2 class="section-title">Skills I am developing.</h2>
+          <p>
+            These are areas I am currently learning and practicing rather than claiming as advanced expertise.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="card skill">
+            <div class="number">01</div>
+            <h3>Business thinking</h3>
+            <p>Learning how organizations, markets, customers, and opportunities connect.</p>
+          </div>
+          <div class="card skill">
+            <div class="number">02</div>
+            <h3>Data & analysis</h3>
+            <p>Developing skills in organizing, interpreting, and presenting data for business contexts.</p>
+          </div>
+          <div class="card skill">
+            <div class="number">03</div>
+            <h3>Digital tools</h3>
+            <p>Building practical experience with productivity tools, websites, and technology.</p>
+          </div>
+          <div class="card skill">
+            <div class="number">04</div>
+            <h3>Communication</h3>
+            <p>Working to communicate ideas more clearly in English and Korean as I continue learning.</p>
+          </div>
+          <div class="card skill">
+            <div class="number">05</div>
+            <h3>Creativity</h3>
+            <p>Enjoying creative activities and exploring different ways to present ideas.</p>
+          </div>
+          <div class="card skill">
+            <div class="number">06</div>
+            <h3>Teamwork</h3>
+            <p>Developing cooperation, responsibility, listening, and collaborative working skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="languages">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">05 · Languages</div>
+          <h2 class="section-title">Languages and communication.</h2>
+          <p>
+            Language learning is an ongoing part of my personal and academic development.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="language">
+            <div class="language-top"><strong>Nepali</strong><span>Native</span></div>
+            <div class="bar"><div class="fill" style="width:100%"></div></div>
+          </div>
+          <div class="language">
+            <div class="language-top"><strong>English</strong><span>Intermediate / improving</span></div>
+            <div class="bar"><div class="fill" style="width:70%"></div></div>
+          </div>
+          <div class="language">
+            <div class="language-top"><strong>Korean</strong><span>Beginner / learning</span></div>
+            <div class="bar"><div class="fill" style="width:35%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">06 · Projects</div>
+          <h2 class="section-title">Projects and learning activities.</h2>
+          <p>
+            A snapshot of practical areas I am exploring as a Business student.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="card project">
+            <div class="number">01</div>
+            <h3>Student portfolio website</h3>
+            <p>Designed a responsive personal portfolio as a single HTML file and prepared it for GitHub Pages.</p>
+          </div>
+          <div class="card project">
+            <div class="number">02</div>
+            <h3>Data analysis learning</h3>
+            <p>Practicing data organization, analysis, and presentation to understand business information.</p>
+          </div>
+          <div class="card project">
+            <div class="number">03</div>
+            <h3>Business research</h3>
+            <p>Exploring business ideas, markets, entrepreneurship, and practical opportunities.</p>
+          </div>
+          <div class="card project">
+            <div class="number">04</div>
+            <h3>Korean learning journey</h3>
+            <p>Studying Korean vocabulary and everyday communication to improve practical communication skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">07 · Goals</div>
+          <h2 class="section-title">Where I want my learning to take me.</h2>
+        </div>
+
+        <div class="goals">
+          <div class="goal">
+            <div class="goal-mark">01</div>
+            <div><strong>Academic growth</strong><p>Build a strong foundation in business and continue improving my academic knowledge.</p></div>
+          </div>
+          <div class="goal">
+            <div class="goal-mark">02</div>
+            <div><strong>Practical skills</strong><p>Turn classroom learning into useful skills through projects, practice, and real-world experience.</p></div>
+          </div>
+          <div class="goal">
+            <div class="goal-mark">03</div>
+            <div><strong>International experience</strong><p>Learn from different cultures and develop the ability to communicate and work across backgrounds.</p></div>
+          </div>
+          <div class="goal">
+            <div class="goal-mark">04</div>
+            <div><strong>Entrepreneurship</strong><p>Learn how to identify real problems and explore responsible, useful business opportunities.</p></div>
+          </div>
+          <div class="goal">
+            <div class="goal-mark">05</div>
+            <div><strong>Personal development</strong><p>Become more confident, disciplined, independent, adaptable, and open to learning from experience.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">08 · Contact</div>
+          <h2 class="section-title">Thank you for visiting.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Let's connect</h3>
+            <p>
+              For academic or portfolio-related communication, please use the email address below.
+            </p>
+            <p class="email-note">
+              Replace the placeholder email before publishing your final version.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:your-email@example.com">your-email@example.com</a>
+            </p>
+            <p class="email-note">Tip: change this to your actual email address before submitting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Shreyasebi Shrestha · Student Portfolio</p>
+    </div>
+  </footer>
+</body>
+</html>
