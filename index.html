@@ -3,6 +3,417 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shreyashi Shrestha | Student Portfolio</title>
+
+  <meta name="description" content="Shreyashi Shrestha's student portfolio, game project, and Week 6 assignment document.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6fc;
+      color: #20243a;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    header h2 {
+      color: #6454d8;
+      font-size: 22px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444761;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #6454d8;
+    }
+
+    .hero {
+      padding: 90px 7%;
+      text-align: center;
+      background: linear-gradient(135deg, #6655dc, #988af2);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #6454d8;
+      color: white;
+      text-decoration: none;
+      border-radius: 9px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #4939bc;
+      transform: translateY(-2px);
+    }
+
+    .hero .button {
+      background: white;
+      color: #5142c4;
+    }
+
+    .hero .button:hover {
+      background: #f0edff;
+    }
+
+    section {
+      padding: 65px 7%;
+      scroll-margin-top: 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #282546;
+    }
+
+    .section-description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #62677c;
+    }
+
+    .about-box {
+      max-width: 850px;
+      margin: 25px auto 0;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 22px rgba(0, 0, 0, 0.05);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      max-width: 1050px;
+      margin: 30px auto 0;
+    }
+
+    .skill {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .skill .icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .skill h3 {
+      margin-bottom: 8px;
+    }
+
+    .skill p {
+      color: #62677c;
+    }
+
+    /* Separate assignment sections */
+    .assignment-section {
+      padding: 65px 7%;
+    }
+
+    #my-game {
+      background: #eeecff;
+    }
+
+    #google-document {
+      background: #e8f8f5;
+    }
+
+    .assignment-card {
+      max-width: 750px;
+      margin: 30px auto 0;
+      padding: 38px 30px;
+      text-align: center;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+    }
+
+    .assignment-icon {
+      font-size: 58px;
+      margin-bottom: 10px;
+    }
+
+    .assignment-card h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: #302952;
+    }
+
+    .assignment-card p {
+      color: #62677c;
+      margin-bottom: 23px;
+    }
+
+    .game-button {
+      background: #6454d8;
+    }
+
+    .game-button:hover {
+      background: #4939bc;
+    }
+
+    .document-button {
+      background: #087e70;
+    }
+
+    .document-button:hover {
+      background: #066355;
+    }
+
+    footer {
+      padding: 28px 7%;
+      background: #24213d;
+      color: white;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 65px 7%;
+      }
+
+      section,
+      .assignment-section {
+        padding: 48px 6%;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .assignment-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <h2>My Student Portfolio</h2>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">My Skills</a>
+      <a href="#my-game">My Game</a>
+      <a href="#google-document">Google Document</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <main>
+    <section class="hero" id="home">
+      <h1>Hello, I'm Shreyashi Shrestha!</h1>
+
+      <p>
+        Welcome to my student portfolio. This website showcases my
+        learning journey, skills, coursework, and projects. Explore
+        my game and Google Document for my Week 6 assignment.
+      </p>
+
+      <a class="button" href="#my-game">Explore My Projects ↓</a>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+
+      <p class="section-description">
+        Get to know me and my learning journey.
+      </p>
+
+      <div class="about-box">
+        <p>
+          Hello! I'm Shreyashi Shrestha. I am a student who enjoys
+          learning new things, exploring creative ideas, and developing
+          digital projects. Through my coursework, I am building my
+          problem-solving, creative thinking, and technology skills.
+          This portfolio brings together my work and academic activities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">My Skills</h2>
+
+      <p class="section-description">
+        Skills I am developing through my studies and projects.
+      </p>
+
+      <div class="skills">
+        <div class="skill">
+          <div class="icon">💡</div>
+          <h3>Creative Thinking</h3>
+          <p>Exploring ideas and finding creative approaches to tasks.</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">🧩</div>
+          <h3>Problem-Solving</h3>
+          <p>Learning to solve problems through practice and improvement.</p>
+        </div>
+
+        <div class="skill">
+          <div class="icon">💻</div>
+          <h3>Digital Skills</h3>
+          <p>Using digital tools to create and share projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separate Section 1: My Game -->
+    <section class="assignment-section" id="my-game">
+      <h2 class="section-title">My Game</h2>
+
+      <p class="section-description">
+        Welcome to my game project! Click the link below to play
+        the game published as part of my student portfolio.
+      </p>
+
+      <div class="assignment-card">
+        <div class="assignment-icon" aria-hidden="true">🎮</div>
+
+        <h3>Play My Game</h3>
+
+        <p>
+          This is my interactive game project for the Week 6 activity.
+          Open it to explore and play the game.
+        </p>
+
+        <a
+          class="button game-button"
+          href="./game.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Play My Game ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- Separate Section 2: Google Document -->
+    <section class="assignment-section" id="google-document">
+      <h2 class="section-title">Google Document</h2>
+
+      <p class="section-description">
+        View my Google Document prepared for the Week 6 assignment.
+      </p>
+
+      <div class="assignment-card">
+        <div class="assignment-icon" aria-hidden="true">📄</div>
+
+        <h3>Week 6 Assignment Document</h3>
+
+        <p>
+          This document contains my assignment materials, including
+          the Snake Game elements, my game's elements, and my initial
+          AI prompt with the improved prompt and chat link.
+        </p>
+
+        <a
+          class="button document-button"
+          href="https://docs.google.com/document/d/1AmuW8s4iS6ZAfRz88SIO8N7zm8yLG4h2d0B5T2szNFE/edit?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Google Document ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 Shreyashi Shrestha | Student Portfolio
+    </p>
+    <p>Learning, creating, and growing through every project.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Student portfolio of Shreyasebi Shrestha, a Business major student with a science background.">
   <title>Shreyasebi Shrestha | Student Portfolio</title>
   <style>
