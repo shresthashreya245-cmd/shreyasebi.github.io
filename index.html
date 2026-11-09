@@ -229,7 +229,7 @@ footer {
     }
 }
 
-/* Assignment resource buttons */
+/* Resource buttons */
 .resource-button {
     display: inline-block;
     background: #6d4bc3;
@@ -240,10 +240,12 @@ footer {
     font-weight: 700;
     transition: background 0.2s ease, transform 0.2s ease;
 }
+
 .resource-button:hover {
     background: #5934a5;
     transform: translateY(-2px);
 }
+
 .hero-links {
     display: flex;
     flex-wrap: wrap;
@@ -251,13 +253,61 @@ footer {
     gap: 14px;
     margin-top: 28px;
 }
+
 .secondary-button {
     background: #ffffff;
     color: #5934a5 !important;
     border: 2px solid #6d4bc3;
 }
+
 .secondary-button:hover {
     background: #f0e8ff;
+}
+
+/* Featured Data Detectives Project */
+.data-detectives-feature {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding: 0 20px;
+}
+
+.data-detectives-panel {
+    background: linear-gradient(135deg, #5934a5, #8061c9);
+    color: white;
+    padding: 34px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(80,50,120,0.24);
+    border: 3px solid #d9c5ff;
+    text-align: center;
+}
+
+.data-detectives-panel h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.data-detectives-panel p {
+    max-width: 760px;
+    margin: 0 auto 18px;
+    font-size: 16px;
+}
+
+.data-detectives-panel .project-cta {
+    display: inline-block;
+    margin: 8px;
+    padding: 13px 20px;
+    background: white;
+    color: #5934a5;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.data-detectives-panel .project-cta:hover {
+    background: #f0e8ff;
+    transform: translateY(-2px);
 }
 
 </style>
@@ -268,6 +318,7 @@ footer {
 <!-- Navigation -->
 <nav>
     <a href="#home">Home</a>
+    <a href="#data-detectives">⭐ Data Detectives</a>
     <a href="#about">About</a>
     <a href="#nepal">Nepal</a>
     <a href="#education">Education</a>
@@ -296,20 +347,58 @@ footer {
         </p>
 
         <div class="hero-links" aria-label="Featured assignment links">
+
             <a class="resource-button"
                href="https://docs.google.com/document/d/1AmuW8s4iS6ZAfRz88SIO8N7zm8yLG4h2d0B5T2szNFE/edit?usp=sharing"
                target="_blank" rel="noopener noreferrer">
                 📄 View Assignment Document ↗
             </a>
+
             <a class="resource-button secondary-button"
                href="https://shresthashreya245-cmd.github.io/shreyasebi.github.io/game.html"
                target="_blank" rel="noopener noreferrer">
                 🎮 Play My Business Game ↗
             </a>
+
+            <a class="resource-button"
+               href="https://github.com/shresthashreya245-cmd/Data-detectives-Project"
+               target="_blank" rel="noopener noreferrer">
+                ⭐ Explore Data Detectives ↗
+            </a>
+
         </div>
 
     </div>
 </div>
+
+<!-- Featured Data Detectives Project -->
+<section id="data-detectives" class="data-detectives-feature">
+
+    <div class="data-detectives-panel">
+
+        <h2>⭐ Featured Project: Data Detectives</h2>
+
+        <p>
+            Explore my Data Detectives project, a CSV data analysis tool
+            created for my project work. Visit the GitHub repository to
+            access the uploaded project files.
+        </p>
+
+        <a class="project-cta"
+           href="https://github.com/shresthashreya245-cmd/Data-detectives-Project"
+           target="_blank" rel="noopener noreferrer">
+            📂 Open Data Detectives GitHub Repository ↗
+        </a>
+
+        <a class="project-cta"
+           href="https://github.com/shresthashreya245-cmd/Data-detectives-Project"
+           target="_blank" rel="noopener noreferrer">
+            View Repository Files ↗
+        </a>
+
+    </div>
+
+</section>
 
 <!-- About -->
 <section id="about">
