@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Shreyasebi Shrestha | Student Portfolio</title>
 
 <style>
@@ -22,7 +20,6 @@ body {
     line-height: 1.7;
 }
 
-/* Navigation */
 nav {
     position: sticky;
     top: 0;
@@ -45,7 +42,6 @@ nav a:hover {
     color: #ffe9ff;
 }
 
-/* Hero */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -92,7 +88,6 @@ nav a:hover {
     margin: auto;
 }
 
-/* Sections */
 section {
     padding: 70px 20px;
     max-width: 1100px;
@@ -112,7 +107,6 @@ section h2 {
     text-align: center;
 }
 
-/* Cards */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -141,7 +135,6 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* Nepal */
 .nepal-box {
     background: white;
     padding: 35px;
@@ -155,7 +148,6 @@ section h2 {
     margin-bottom: 8px;
 }
 
-/* Language bars */
 .language {
     margin-bottom: 20px;
 }
@@ -180,7 +172,6 @@ section h2 {
     border-radius: 20px;
 }
 
-/* Goals */
 .goal-list {
     max-width: 800px;
     margin: auto;
@@ -195,7 +186,6 @@ section h2 {
     box-shadow: 0 3px 12px rgba(80,50,120,0.1);
 }
 
-/* Contact */
 .contact {
     text-align: center;
     background: #e7d8fa;
@@ -209,7 +199,6 @@ section h2 {
     text-decoration: none;
 }
 
-/* Footer */
 footer {
     background: #49327c;
     color: white;
@@ -222,7 +211,6 @@ footer {
     color: #70598e;
 }
 
-/* Mobile */
 @media (max-width: 700px) {
     .hero h1 {
         font-size: 36px;
@@ -235,7 +223,6 @@ footer {
     }
 }
 
-/* Resource buttons */
 .resource-button {
     display: inline-block;
     background: #6d4bc3;
@@ -270,52 +257,7 @@ footer {
     background: #f0e8ff;
 }
 
-/* Featured Data Detectives Project */
-.data-detectives-feature {
-    max-width: 1100px;
-    margin: 35px auto 0;
-    padding: 0 20px;
-}
-
-.data-detectives-panel {
-    background: linear-gradient(135deg, #5934a5, #8061c9);
-    color: white;
-    padding: 34px;
-    border-radius: 22px;
-    box-shadow: 0 8px 25px rgba(80,50,120,0.24);
-    border: 3px solid #d9c5ff;
-    text-align: center;
-}
-
-.data-detectives-panel h2 {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-.data-detectives-panel p {
-    max-width: 760px;
-    margin: 0 auto 18px;
-    font-size: 16px;
-}
-
-.data-detectives-panel .project-cta {
-    display: inline-block;
-    margin: 8px;
-    padding: 13px 20px;
-    background: white;
-    color: #5934a5;
-    border-radius: 10px;
-    font-weight: 800;
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-.data-detectives-panel .project-cta:hover {
-    background: #f0e8ff;
-    transform: translateY(-2px);
-}
-
+/* Data Detectives Project */
 </style>
 </head>
 
@@ -324,7 +266,7 @@ footer {
 <!-- Navigation -->
 <nav>
     <a href="#home">Home</a>
-    <a href="#resources">📚 Projects & Tools</a>
+    <a href="#data-detectives">🕵️ Data Detectives Project</a>
     <a href="#about">About</a>
     <a href="#nepal">Nepal</a>
     <a href="#education">Education</a>
@@ -352,7 +294,7 @@ footer {
             business, technology, creativity, and learning new things.
         </p>
 
-        <div class="hero-links" aria-label="Featured assignment links">
+        <div class="hero-links">
 
             <a class="resource-button"
                href="https://docs.google.com/document/d/1AmuW8s4iS6ZAfRz88SIO8N7zm8yLG4h2d0B5T2szNFE/edit?usp=sharing"
@@ -366,108 +308,105 @@ footer {
                 🎮 Play My Business Game ↗
             </a>
 
-            <a class="resource-button"
-               href="https://github.com/shresthashreya245-cmd/Data-detectives-Project"
-               target="_blank" rel="noopener noreferrer">
-                ⭐ Explore Data Detectives ↗
-            </a>
-
-            <a class="resource-button secondary-button"
-               href="data_detectives_csv_analyzer.html"
-               target="_blank" rel="noopener noreferrer">
-                📊 Launch CSV Analyzer ↗
-            </a>
-
         </div>
-
     </div>
 </div>
 
-<!-- Projects, Tools & Resources -->
-<section id="resources">
+<!-- Data Detectives Project -->
+<section id="data-detectives">
 
-    <h2>📚 Projects, Tools & Resources</h2>
+    <h2>🕵️ Data Detectives Project</h2>
 
     <p class="section-intro">
-        This section brings together my project folder, data analysis tool, and future work.
-        I will continue adding new assignments, projects, and useful tools here as I learn.
+        This section contains my Data Detectives project folder
+        and the two assignment tools. Open each item separately.
     </p>
 
     <div class="cards">
 
+        <!-- Google Drive -->
         <div class="card">
-            <div class="icon">🕵️‍♀️</div>
-            <h3>Data Detectives Project Folder</h3>
+            <div class="icon">📁</div>
+
+            <h3>Data Detectives Project Folder — Google Drive</h3>
+
             <p>
-                Explore my Data Detectives project repository, including the project archive,
-                supporting files, datasets, documentation, and reports.
+                Open the shared Google Drive folder for my
+                Data Detectives project materials, reports,
+                documents, and supporting files.
             </p>
+
             <p style="margin-top:18px;">
                 <a class="resource-button"
-                   href="https://github.com/shresthashreya245-cmd/Data-detectives-Project"
+                   href="https://drive.google.com/drive/folders/1-_9_1RLSERbRjJb1qS-x_ne5nqcpHDD2?usp=drive_link"
                    target="_blank" rel="noopener noreferrer">
-                    Open Project Repository ↗
+                    Open Google Drive Project Folder ↗
                 </a>
             </p>
-            <p style="margin-top:12px;">
-                <a class="resource-button secondary-button"
-                   href="data_detectives_project.zip" download>
-                    Download Project Folder (.ZIP) ↓
+
+            <p class="small" style="margin-top:12px;">
+                Dataset source folder:
+                <a href="https://drive.google.com/drive/folders/1uRrdBzosHM_u8Cey7-HAFhCj7Ovl6ftw?usp=drive_link"
+                   target="_blank" rel="noopener noreferrer">
+                    Open Data Detectives dataset folder ↗
                 </a>
             </p>
         </div>
 
+        <!-- DD1 Tool -->
         <div class="card">
             <div class="icon">📊</div>
-            <h3>Data Detectives CSV Analyzer</h3>
+
+            <h3>DD Assignment 1 — Allocation Report</h3>
+
             <p>
-                Open my browser-based CSV analysis tool. It supports CSV upload, searching,
-                sorting, filtering, data-quality checks, cleaning, descriptive statistics,
-                charts, and exporting cleaned data and a change log.
+                Open the CSV Analyzer to upload a dataset,
+                search and filter records, review data quality,
+                clean data, calculate descriptive statistics,
+                view charts, and download the cleaned CSV
+                and change log.
             </p>
+
             <p style="margin-top:18px;">
                 <a class="resource-button"
                    href="data_detectives_csv_analyzer.html"
                    target="_blank" rel="noopener noreferrer">
-                    Launch CSV Analyzer ↗
+                    Open DD1 CSV Analysis Tool ↗
                 </a>
             </p>
+
             <p class="small" style="margin-top:12px;">
-                Upload data_detectives_csv_analyzer.html to the same main GitHub repository
-                folder as index.html so this button opens the live analyzer.
+                Upload your CSV inside the tool to begin.
             </p>
         </div>
 
+        <!-- DD3 Tool -->
         <div class="card">
-            <div class="icon">💻</div>
-            <h3>Analyzer Source Code</h3>
+            <div class="icon">🔐</div>
+
+            <h3>DD Assignment 3 — Cipher Analysis</h3>
+
             <p>
-                View the HTML source file for the CSV analyzer in my Data Detectives
-                GitHub repository.
+                Open the Cipher Tool to encrypt and decrypt
+                messages using Vigenère, AES-256-GCM, and Caesar.
+                It accepts typed text and TXT/CSV files and
+                provides results and a letter-frequency chart.
             </p>
+
             <p style="margin-top:18px;">
-                <a class="resource-button secondary-button"
-                   href="https://github.com/shresthashreya245-cmd/shreyasebi.github.io/blob/main/data_detectives_csv_analyzer.html"
+                <a class="resource-button"
+                   href="dd3_cipher_tool.html"
                    target="_blank" rel="noopener noreferrer">
-                    View Analyzer on GitHub ↗
+                    Open DD3 Cipher Analysis Tool ↗
                 </a>
             </p>
-        </div>
 
-        <div class="card">
-            <div class="icon">🚀</div>
-            <h3>Future Projects & Tools</h3>
-            <p>
-                New course assignments, business projects, websites, and digital tools
-                will be added to this section as I continue developing my skills.
-            </p>
-            <p style="margin-top:18px; color:#70598e; font-weight:700;">
-                More resources coming soon.
+            <p class="small" style="margin-top:12px;">
+                Use the published HTTPS GitHub Pages version for AES-256-GCM.
             </p>
         </div>
 
     </div>
-
 </section>
 
 <!-- About -->
@@ -511,7 +450,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Nepal -->
@@ -555,7 +493,6 @@ footer {
         </p>
 
     </div>
-
 </section>
 
 <!-- Education -->
@@ -583,7 +520,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Skills -->
@@ -639,7 +575,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Languages -->
@@ -685,7 +620,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Projects -->
@@ -732,7 +666,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Assignment Resources -->
@@ -780,7 +713,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Goals -->
@@ -821,7 +753,6 @@ footer {
         </div>
 
     </div>
-
 </section>
 
 <!-- Contact -->
@@ -843,7 +774,6 @@ footer {
         </p>
 
     </div>
-
 </section>
 
 <!-- Footer -->
